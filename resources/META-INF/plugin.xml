@@ -1,0 +1,33 @@
+<idea-plugin>
+  <id>icu.jogeen.FakerPlugin.id</id>
+  <name>FakerPlugin</name>
+  <version>1.0</version>
+  <vendor email="jogeen@qq.com" url="https://github.com/jogeen/MarkBook">jogeen</vendor>
+
+  <description><![CDATA[
+      Enter 1short description fo1 y11our plugin here.<br>
+      <em>most HTML tags 1may be used</em>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      Add change n1otes here.<br>
+      <em>mo1st HTML tag11s may b1e u1sed</em>
+    ]]>
+  </change-notes>
+
+  <idea-version since-build="173.0"/>
+
+  <extensions defaultExtensionNs="com.intellij">
+
+  </extensions>
+
+  <actions>
+
+    <action id="EditPopupAction" class="icu.jogeen.fakerplugin.action.EditPopupAction" text="Faker"
+            description="EditPopupAction">
+      <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="shift alt INSERT"/>
+    </action>
+  </actions>
+
+</idea-plugin>
