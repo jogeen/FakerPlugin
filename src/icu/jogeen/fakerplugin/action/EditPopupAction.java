@@ -2,8 +2,11 @@ package icu.jogeen.fakerplugin.action;
 
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
-import icu.jogeen.fakerplugin.config.FakerLanguageConfigFactory;
+import icu.jogeen.fakerplugin.service.FakerService;
+import icu.jogeen.fakerplugin.service.FakerServiceFactory;
 import icu.jogeen.fakerplugin.ui.FakerDialog;
+
+import java.util.Locale;
 
 /**
  * @Author jogeen
@@ -15,8 +18,8 @@ public class EditPopupAction extends AnAction {
 
     @Override
     public void actionPerformed(AnActionEvent e) {
-        FakerLanguageConfigFactory.createFakerLanguageConfig();
-        FakerDialog fakerDialog = new FakerDialog();
+        FakerService fakerService = FakerServiceFactory.getFakerService(Locale.ENGLISH);
+        FakerDialog fakerDialog = new FakerDialog(fakerService,e);
         fakerDialog.setVisible(true);
     }
 }
