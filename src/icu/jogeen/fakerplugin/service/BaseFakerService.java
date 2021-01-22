@@ -2,11 +2,10 @@ package icu.jogeen.fakerplugin.service;
 
 import com.github.javafaker.Faker;
 import icu.jogeen.fakerplugin.config.LanguageConfig;
-import icu.jogeen.fakerplugin.config.enums.LanguageConfigEnum;
 import icu.jogeen.fakerplugin.config.model.Field;
 import icu.jogeen.fakerplugin.config.model.Topic;
-import icu.jogeen.fakerplugin.service.FakerService;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -32,19 +31,27 @@ public class BaseFakerService implements FakerService {
 
     }
 
-
     @Override
     public List<String> getTopics() {
-        return null;
+        return Arrays.asList("city","color","address");
     }
 
     @Override
     public List<String> getFields(int index) {
-        return null;
+        if(index==0){
+            return Arrays.asList("name1","hehe3");
+        }
+        if(index==1){
+            return Arrays.asList("name2","hehe3");
+        }
+
+            return Arrays.asList("name3","hehe3");
+
+
     }
 
     @Override
     public String invoke(int topic, int field) {
-        return null;
+        return faker.address().cityName();
     }
 }
