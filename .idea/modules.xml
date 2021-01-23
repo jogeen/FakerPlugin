@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/FakerPlugin.iml" filepath="$PROJECT_DIR$/.idea/FakerPlugin.iml" />
       <module fileurl="file://$PROJECT_DIR$/FakerPlugin.iml" filepath="$PROJECT_DIR$/FakerPlugin.iml" />
     </modules>
   </component>

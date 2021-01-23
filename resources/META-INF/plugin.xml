@@ -18,11 +18,12 @@
   <idea-version since-build="173.0"/>
 
   <extensions defaultExtensionNs="com.intellij">
-
+    <intentionAction>
+      <className>icu.jogeen.fakerplugin.action.FakerAction</className>
+    </intentionAction>
   </extensions>
 
   <actions>
-
     <action id="EditPopupAction" class="icu.jogeen.fakerplugin.action.EditPopupAction" text="Faker"
             description="EditPopupAction">
       <add-to-group group-id="EditorPopupMenu" anchor="first"/>
